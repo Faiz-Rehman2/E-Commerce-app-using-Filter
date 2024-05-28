@@ -224,14 +224,16 @@ const products = [
   }
 ];
   
-let div = document.querySelector('div')
+let div = document.querySelector('div');
+
 products.map((item) => {
 
 div.innerHTML += `
+<div class="box">
 <h1>Product name: ${item.brand} ${item.name}</h1>
 <h1>Category: ${item.category}</h1>
 <h1>Price: ${item.price}</h1>
-<hr/>
+</div>
 `
 })
 
@@ -241,10 +243,11 @@ const filteredItem =(btn) =>{
     
     const filtered = products.filter(item =>item.category === btn.innerHTML).map(item =>{
         div.innerHTML += `
+        <div class="box">
         <h1>Product name: ${item.brand} ${item.name}</h1>
         <h1>Category: ${item.category}</h1>
         <h1>Price: ${item.price}</h1>
-        <hr/>
+        </div>
         `
         })
 }
@@ -255,10 +258,11 @@ function item(){
     products.map(item => {
 
         div.innerHTML += `
+        <div class="box">
         <h1>Product name: ${item.brand} ${item.name}</h1>
         <h1>Category: ${item.category}</h1>
         <h1>Price: ${item.price}</h1>
-        <hr/>
+        </div>
         `
     
     })
